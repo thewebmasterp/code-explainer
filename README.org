@@ -1,0 +1,7 @@
+* Code Explainer
+The Code Explainer is a platform for presenting code to people, built with React.
+
+See [[https://code-explainer.thewebmasterp.com/][live]]
+
+Or [[https://thewebmasterp.com/projects/code-explainer][learn more]] about the project
+
