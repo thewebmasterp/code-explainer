@@ -1,0 +1,26 @@
+@import '../../colorTheme.scss';
+
+@keyframes fadeIn {
+    0% {opacity:0; transform: scale(0.8);}
+    70% {opacity:1;}
+    100% {opacity:1; transform: scale(1);}
+}
+
+#CoeusIntro {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    word-break: break-word;
+    #helloWorld {
+        max-width: 100%;
+        text-align: center;
+        line-height: 1.3em;
+        animation: fadeIn 5s;
+        transform: scale(1);
+    }
+}

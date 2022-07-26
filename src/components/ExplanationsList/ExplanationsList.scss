@@ -1,0 +1,180 @@
+@import '../../colorTheme.scss';
+
+.App {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 2fr;
+    height: 100%;
+    background: $black; 
+}
+
+
+#ExplanationsList {
+    height: 100%;
+    overflow: auto;
+    max-width: 100vw;
+    max-height: 25em;
+    display: grid;
+    grid-template-rows: 2em auto;
+    grid-template-columns: auto;
+    #callToAction1 {
+        grid-row: 1/2;
+        min-width: 300px;
+        line-height: 2em;
+        height: 2em;
+        padding-left: 1em;
+    }
+    #list {
+        min-width: 300px;
+        grid-row: 2/3;
+        width: 100vw;
+        overflow-y: auto;
+        .ExplanationBullet {
+            border: 1px solid black;
+            width: calc(100% - 20px);
+            height: 200px;
+            margin: 10px 10px 0px 10px;
+            border-radius: $BR;
+            .EBWrapper {
+                border-radius: $BR;
+                height: 100%;
+                width: 100%;
+                background: $dirt;
+                display: grid;
+                grid-template-rows: auto auto 40px;
+                grid-template-columns: 1fr 1.5fr;
+                a {
+                    grid-column: 1/2;
+                    grid-row: 1/4;
+                    .thumb {
+                        border-radius: $BR 0 0 $BR;
+                        background: turquoise;
+                    }
+                }
+                h1 {
+                    grid-column: 2/3;
+                    grid-row: 1/2;
+                    a {
+                        color: $black;
+                        &:hover {
+                            color: $red;
+                        }
+                        &:visited {
+                            color: $verde;
+                        }
+                    }
+                }
+                p {
+                    grid-column: 2/3;
+                    grid-row: 2/3;
+                    color: $black;
+                }
+                .btnBox {
+                    display: flex;
+                    justify-content: right;
+                    position: relative;
+                    bottom: 0.5em;
+                    .Button {
+                        margin-right: 1em;
+                    }
+                }
+                .callToAction1 {
+                    grid-column: 2/3;
+                    grid-row: 3/4;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 600px) {
+    #ExplanationsList {
+        justify-content: center;
+        #list {
+            max-width: 80vw;
+            display: flex;
+            overflow-x: auto;
+            .ExplanationBullet {
+                width: auto;
+                height: calc(100% - 20px);
+                margin: 10px 0px 10px 10px;
+                .EBWrapper {
+                    width: 200px;
+                    grid-template-rows: 150px 2em auto 40px;
+                    grid-template-columns: 100%;
+                    a {
+                        grid-row: 1/2;
+                        grid-column: 1/2;
+                        .thumb {
+                            border-radius: $BR 0 0 $BR;
+                            background: turquoise;
+                          
+                        }
+                    }
+                    h1 {
+                        grid-row: 2/3;
+                        grid-column: 1/2;
+                    }
+                    p {
+                        grid-row: 3/4;
+                        grid-column: 1/2;
+                    }
+                    .btnBox {
+                        justify-content: center;
+                        .Button {
+                            margin-right: 0em;
+                        }
+                    }
+                    .callToAction1 {
+                        grid-row: 4/5;
+                        grid-column: 1/2;
+                    }
+                }
+            }
+        }
+    }
+}
+
+  #CoeusIntro, #ExplanationsList, #Footer {
+    font-size: 16px;
+  }
+  @media screen and (min-width: 320px) {
+    #CoeusIntro, #ExplanationsList, #Footer {
+      font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+    }
+  }
+  @media screen and (min-width: 1000px) {
+    #CoeusIntro, #ExplanationsList, #Footer {
+      font-size: 22px;
+    }
+  }
+
+@media screen and (orientation:portrait) {
+    .App {
+        grid-template-columns: auto;
+        grid-template-rows: 1fr 2fr;
+    }
+}
+@media screen and (orientation:landscape) and (max-height: 25em) {
+    .App {
+        width: 100%;
+        height: 100%;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto;
+        justify-content: right im !important;
+        align-items: right;
+        #CoeusIntro {
+            grid-row: 1/2;
+            grid-column: 1/2;
+        }
+        #ExplanationsList {
+            width: 100%;
+            #list, #callToAction1 {
+                min-width: 100px;
+                width: 100%;
+            }
+            grid-row: 1/2;
+            grid-column: 2/3;
+        }
+    }
+}

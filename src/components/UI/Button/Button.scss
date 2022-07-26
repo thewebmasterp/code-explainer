@@ -1,0 +1,49 @@
+@import '../../../colorTheme.scss';
+
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.Button {
+    background: $red;
+    padding: 10px;
+    // color: $black;
+    width: auto;
+    border-radius: $BR;
+    font-weight: bold;
+    // color: $dirt;
+    cursor: pointer;
+
+    &.dark {
+        color: $dirt;
+        &:hover {
+            background: lighten($red, 10);
+        }
+        &:active {
+            background: $dirt;
+            color: $black;
+        }
+        &:disabled {
+            background: gray;
+        }
+    }
+    &.light {
+        color: $water;
+        &:hover {
+            background: lighten($red, 10);
+        }
+        &:active {
+            background: $water;
+            color: $black;
+        }
+        &:disabled {
+            background: grey;
+        }
+    }
+}

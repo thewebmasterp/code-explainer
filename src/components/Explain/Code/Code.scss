@@ -1,0 +1,23 @@
+@import '../../../colorTheme.scss';
+
+#Wrap123 {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1.5em auto;
+    #rownum {
+        grid-column: 1/2;
+        background: $trans1;
+        height: 100%;
+        width: 100%;
+        text-align: right;
+    }
+    #Code {
+        grid-column: 2/3;
+        overflow-x: auto;
+        box-shadow: 1px 0px 19px 7px rgba(0,0,0,0.36);
+        z-index:999;
+
+    }
+}

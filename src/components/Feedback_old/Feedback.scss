@@ -1,0 +1,36 @@
+#Feedback {
+    grid-row: span 2;
+    grid-column: span 2;
+    height: auto;
+    width: 100%;
+    background: steelblue;
+    display: grid;
+    grid-template-rows: 90vh auto;
+    grid-template-columns: auto;
+    #FormWrapper {
+        background: tan;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        #Form {
+            background: rgba(0, 0, 0, 0.3);
+            height: auto;
+            min-height: 50px;
+            // width: 100%;
+            width: 70vw;
+            max-width: 1000px;
+            min-width: 300px;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    #Feedback {
+        #FormWrapper { 
+            #Form {
+                width: 100vw;
+            }
+        }
+    }
+}

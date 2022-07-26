@@ -1,0 +1,9 @@
+@import '../../colorTheme.scss';
+
+.SocialMedias {
+    display: flex;
+    justify-content: space-evenly;
+    a {
+        color: $water;
+    }
+}

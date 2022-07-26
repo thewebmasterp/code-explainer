@@ -1,0 +1,12 @@
+@import '../../../colorTheme.scss';
+
+.Card {
+    background: $verde;
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: $water;
+    vertical-align: top;
+}

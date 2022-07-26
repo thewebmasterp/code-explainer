@@ -1,0 +1,29 @@
+@import '../../colorTheme.scss';
+
+
+.Feedback {
+    height: 100%;
+    width: 100%;
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    form {
+        width: 100%;
+        height: 100vh;
+        overflow: auto;
+        .unit {
+            background-color: #E3EDFD;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            #survey {
+              width: 100%;
+              height: calc(100% - 3em);
+            }      
+        }
+        
+    }
+}

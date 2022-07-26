@@ -1,0 +1,18 @@
+.Magic {
+    display: block;
+    word-wrap: break-all;
+    // background: red;
+    max-width: 50%;
+    height: auto;
+
+    word-wrap: break-word;
+    white-space: pre-wrap;   
+    word-break: break-word;
+    line-height: 2em;
+}
+
+@media(max-width: 1000px) {
+    .Magic {
+        max-width: 80%;
+    }
+}

@@ -1,0 +1,33 @@
+@import '../../../../colorTheme.scss';
+
+.Row {
+    white-space: pre-wrap;
+    height: auto;
+    line-height: 1.2em;
+    width: auto;
+    border-bottom: 1px solid $trans1;
+    padding: 0.1em;
+    &.num {
+        text-align: left;
+        &.active {
+            background: $dirt;
+            color: $verde;
+        }
+        &.inactive {
+            // background: violet;
+            
+        }
+    }
+    &.content {
+        width: 200%;
+        // word-spacing: 0.01em;
+        &.active {
+            background: $verde;
+            color: $water;
+        }
+        &.inactive {
+            // background: blue;
+            color: $dirt
+        }
+    }
+}

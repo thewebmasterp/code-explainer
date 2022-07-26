@@ -1,0 +1,30 @@
+@import '../../colorTheme.scss';
+
+html, #root {
+    overflow-y: auto !important;
+}
+
+#Footer {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    width: 100%;
+    background: lighten($color: $black, $amount: 3);
+    padding-top: 1.6em;
+    padding-bottom: 1.6em;
+    padding-right: 1.6em;
+    padding-left: 1.6em;
+    box-shadow: inset 0px 12px 31px -8px rgba(0,0,0,0.39);
+    .SocialMedias {
+        width: 13em;
+        margin-left: 50px;
+    }
+    #copyright {
+        p {
+            opacity: 0.5;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
